@@ -4,9 +4,11 @@
 title = mohammad
 
 # (str) Package name
+
 package.name = mohammad
 
 # (str) Package domain (needed for android/ios packaging)
+
 package.domain = org.mohammad
 
 # (str) Source code where the main.py live
