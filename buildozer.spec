@@ -1,19 +1,13 @@
-# This .spec config file tells Buildozer an app's requirements for being built.
-#
-# It largely follows the syntax of an .ini file.
-# See the end of the file for more details and warnings about common mistakes.
-
 [app]
 
 # (str) Title of your application
-title = mohammad saeednia
+title = My Application
 
 # (str) Package name
-
-package.name = mohammad
+package.name = myapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.mohammad
+package.domain = org.test
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -43,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy=2.1.0,pygame==2.4.0,SDL==2.26.4,python==3.9.13
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -183,20 +177,16 @@ fullscreen = 0
 # down the build process. Allows wildcards matching, for example:
 # OUYA-ODK/libs/*.jar
 #android.add_jars = foo.jar,bar.jar,path/to/more/*.jar
-
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
 #android.add_src =
-
 # (list) Android AAR archives to add
 #android.add_aars =
-
 # (list) Put these files or directories in the apk assets directory.
 # Either form may be used, and assets need not be in 'source.include_exts'.
 # 1) android.add_assets = source_asset_relative_path
 # 2) android.add_assets = source_asset_path:destination_asset_relative_path
 #android.add_assets =
-
 # (list) Put these files or directories in the apk res directory.
 # The option may be used in three ways, the value may contain one or zero ':'
 # Some examples:
@@ -208,55 +198,42 @@ fullscreen = 0
 # each of a resource kind:  drawable, xml, etc...
 # android.add_resources = legal_resources
 #android.add_resources =
-
 # (list) Gradle dependencies to add
 #android.gradle_dependencies =
-
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
 # android.enable_androidx requires android.api >= 28
 #android.enable_androidx = True
-
 # (list) add java compile options
 # this can for example be necessary when importing certain java libraries using the 'android.gradle_dependencies' option
 # see https://developer.android.com/studio/write/java8-support for further information
 # android.add_compile_options = "sourceCompatibility = 1.8", "targetCompatibility = 1.8"
-
 # (list) Gradle repositories to add {can be necessary for some android.gradle_dependencies}
 # please enclose in double quotes 
 # e.g. android.gradle_repositories = "maven { url 'https://kotlin.bintray.com/ktor' }"
 #android.add_gradle_repositories =
-
 # (list) packaging options to add 
 # see https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.PackagingOptions.html
 # can be necessary to solve conflicts in gradle_dependencies
 # please enclose in double quotes 
 # e.g. android.add_packaging_options = "exclude 'META-INF/common.kotlin_module'", "exclude 'META-INF/*.kotlin_module'"
 #android.add_packaging_options =
-
 # (list) Java classes to add as activities to the manifest.
 #android.add_activities = com.example.ExampleActivity
-
 # (str) OUYA Console category. Should be one of GAME or APP
 # If you leave this blank, OUYA support will not be enabled
 #android.ouya.category = GAME
-
 # (str) Filename of OUYA Console icon. It must be a 732x412 png image.
 #android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png
-
 # (str) XML file to include as an intent filters in <activity> tag
 #android.manifest.intent_filters =
-
 # (list) Copy these files to src/main/res/xml/ (used for example with intent-filters)
 #android.res_xml = PATH_TO_FILE,
-
 # (str) launchMode to set for the main activity
 #android.manifest.launch_mode = standard
-
 # (str) screenOrientation to set for the main activity.
 # Valid values can be found at https://developer.android.com/guide/topics/manifest/activity-element
 #android.manifest.orientation = fullSensor
-
 # (list) Android additional libraries to copy into libs/armeabi
 #android.add_libs_armeabi = libs/android/*.so
 #android.add_libs_armeabi_v7a = libs/android-v7/*.so
@@ -267,43 +244,33 @@ fullscreen = 0
 # (bool) Indicate whether the screen should stay on
 # Don't forget to add the WAKE_LOCK permission if you set this to True
 #android.wakelock = False
-
 # (list) Android application meta-data to set (key=value format)
 #android.meta_data =
-
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
 #android.library_references =
-
 # (list) Android shared libraries which will be added to AndroidManifest.xml using <uses-library> tag
 #android.uses_library =
-
 # (str) Android logcat filters to use
 #android.logcat_filters = *:S python:D
-
 # (bool) Android logcat only display log for activity's pid
 #android.logcat_pid_only = False
-
 # (str) Android additional adb arguments
 #android.adb_args = -H host.docker.internal
-
 # (bool) Copy library instead of making a libpymodules.so
 #android.copy_libs = 1
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
 android.archs = arm64-v8a, armeabi-v7a
-
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
 # android.numeric_version = 1
 
 # (bool) enables Android auto backup feature (Android API >=23)
 android.allow_backup = True
-
 # (str) XML file for custom backup rules (see official auto backup documentation)
 # android.backup_rules =
-
 # (str) If you need to insert variables into your AndroidManifest.xml file,
 # you can do so with the manifestPlaceholders property.
 # This property takes a map of key-value pairs. (via a string)
@@ -318,39 +285,30 @@ android.allow_backup = True
 
 # (str) The format used to package the app for debug mode (apk or aar).
 # android.debug_artifact = apk
-
 #
 # Python for android (p4a) specific
 #
-
 # (str) python-for-android URL to use for checkout
 #p4a.url =
-
 # (str) python-for-android fork to use in case if p4a.url is not specified, defaults to upstream (kivy)
 #p4a.fork = kivy
-
 # (str) python-for-android branch to use, defaults to master
 #p4a.branch = master
-
 # (str) python-for-android specific commit to use, defaults to HEAD, must be within p4a.branch
 #p4a.commit = HEAD
-
 # (str) python-for-android git clone directory
 #p4a.source_dir =
-
 # (str) The directory in which python-for-android should look for your own build recipes (if any)
 #p4a.local_recipes =
 
 # (str) Filename to the hook for p4a
 #p4a.hook =
-
 # (str) Bootstrap to use for android builds
 # Run "buildozer android p4a -- bootstraps" for a list of valid values.
 # p4a.bootstrap = sdl2
 
 # (int) port number to specify an explicit --port= p4a argument (eg for bootstrap flask)
 #p4a.port =
-
 # Control passing the --use-setup-py vs --ignore-setup-py to p4a
 # "in the future" --use-setup-py is going to be the default behaviour in p4a, right now it is not
 # Setting this to false will pass --ignore-setup-py, true will pass --use-setup-py
@@ -360,13 +318,9 @@ android.allow_backup = True
 
 # (str) extra command line arguments to pass when invoking pythonforandroid.toolchain
 #p4a.extra_args =
-
-
-
 #
 # iOS specific
 #
-
 # (str) Path to a custom kivy-ios folder
 #ios.kivy_ios_dir = ../kivy-ios
 # Alternately, specify the URL and branch of a git checkout:
@@ -407,8 +361,6 @@ ios.codesign.allowed = false
 # (str) URL pointing to a large icon (512x512px) to be used by iTunes
 # This option should be defined along with `app_url` and `display_image_url` options.
 #ios.manifest.full_size_image_url =
-
-
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
@@ -463,14 +415,14 @@ warn_on_root = 1
 #   HD content. You could first change the title to add "(demo)" in the name
 #   and extend the excluded directories to remove the HD content.
 #
-#       [app@demo]
-#       title = My Application (demo)
+#     [app@demo]
+#     title = My Application (demo)
 #
-#       [app:source.exclude_patterns@demo]
-#       images/hd/*
+#    [app:source.exclude_patterns@demo]
+#    images/hd/*
 #
 #   Then, invoke the command line with the "demo" profile:
 #
-#        buildozer --profile demo android debug
+#   buildozer --profile demo android debug
 #
-#   Environment variable overrides have priority over profile overrides.
+#   Environment variab
