@@ -1,21 +1,26 @@
 [app]
 
 # (str) Title of your application
-title = SampleApp
+
+title = mohammad
 
 # (str) Package name
-package.name = sampleapk
+
+package.name = mohammad
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.novfensec
+
+package.domain = org.mohammad
 
 # (str) Source code where the main.py live
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
+
 source.include_exts = py,png,jpg,kv,txt,atlas
 
 # (list) List of inclusions using pattern matching
+
 source.include_patterns = images/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
@@ -44,12 +49,15 @@ requirements = python3,kivy=2.1.0,pygame==2.4.0,SDL==2.26.4,python==3.9.13
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
+
 presplash.filename = %(source.dir)s/images/presplash.png
 
 # (str) Icon of the application
+
 icon.filename = %(source.dir)s/images/favicon.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+
 orientation = portrait
 
 # (list) List of service to declare
