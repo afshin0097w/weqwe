@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = mohammad
 
 # (str) Package name
-package.name = myapp
+package.name = mohammad
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+package.domain = org.mohammad
 
 # (str) Source code where the main.py live
 source.dir = .
