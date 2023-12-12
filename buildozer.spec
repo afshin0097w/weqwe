@@ -122,7 +122,7 @@ fullscreen = 0
 #android.ndk_path =
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
-#android.sdk_path =
+#android.sdk_path =C:\Users\laptop-part\AppData\Local\Android\Sdk
 
 # (str) ANT directory (if empty, it will be automatically downloaded.)
 #android.ant_path =
